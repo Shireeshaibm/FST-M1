@@ -1,32 +1,37 @@
-package Activities;
-
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Activity13 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number:\n");
-        ArrayList<Integer> inputList = new ArrayList<>();
-        Random indexGen = new Random();
-        
-        while(sc.hasNextInt()) {
-            inputList.add(sc.nextInt());
-        }
+public class Activity_13 {
 
-        Integer numbers[] = inputList.toArray(new Integer[0]);
-        int size = numbers.length;
-        int index = indexGen.nextInt(size);
-        System.out.println("Index generated is: "+index);
-        System.out.println("Value at index is: "+numbers[index]);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
-        sc.close();
-    }
-
-    
-}
-
-
+		Scanner s= new Scanner(System.in);
+		
+		ArrayList<Integer> al= new ArrayList<Integer>();
+		
+		
+		Random indexGen= new Random();
+		System.out.println("enter integrs please");
+		
+		System.out.println("(EOF or non-integer to terminate): ");
+		 while(s.hasNextInt()) {
+	            al.add(s.nextInt());
+	        }
+	 
+	        Integer nums[] = al.toArray(new Integer[0]);
+	        int index = indexGen.nextInt(nums.length);
+	        System.out.println("Index value generated: " + index);
+	        System.out.println("Value in arary at generated index: " + nums[index]);
+	 
+	        s.close();
+	    }
+	
+		
+		
+		
+		
+	}
 
 
